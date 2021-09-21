@@ -35,6 +35,7 @@ function setup() {
 	star = createSprite(650,30);
 	star.addImage(starImg);
 	star.scale = 0.2;
+	star.velocityY= 2
 
 	engine = Engine.create();
 	world = engine.world;
@@ -62,14 +63,16 @@ function draw() {
 }else if (keyDown(LEFT_ARROW)){
 	fairy.velocityX=-6
 }else if (keyDown(DOWN_ARROW)){
-	star.velocityY=3
+	Matter.Body.setStatic(starBody,true);
+	star.velocityY=2
 }
 
-//writw code to move fairy left and right
+//write code to move fairy left and right
 
-if(star.y>470){
-	star.velocityY=0
+if(star.y>470 && starBody.positionY > 470){
+	Matter.Body.setStaticMatter.Body.setStatic(starBody,true);
 }
+console.log(star.y)
 
   drawSprites();
 
