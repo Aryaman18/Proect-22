@@ -58,21 +58,17 @@ function draw() {
   star.y= starBody.position.y 
 
  
-  if(keyDown(RIGHT_ARROW)){
-	fairy.velocityX=6
-}else if (keyDown(LEFT_ARROW)){
-	fairy.velocityX=-6
-}else if (keyDown(DOWN_ARROW)){
-	Matter.Body.setStatic(starBody,true);
-	star.velocityY=2
-}
+  if(keyDown(RIGHT_ARROW)){ 
+	fairy.velocityX=6 
+} else if (keyDown(LEFT_ARROW)){ 
+   fairy.velocityX=-6 
+} else if (keyDown(DOWN_ARROW)){
+   Matter.Body.setStatic(starBody,false); 
+   star.velocityY=2 }
 
 //write code to move fairy left and right
 
-if(star.y>470 && starBody.positionY > 470){
-	Matter.Body.setStaticMatter.Body.setStatic(starBody,true);
-}
-console.log(star.y)
+
 
   drawSprites();
 
