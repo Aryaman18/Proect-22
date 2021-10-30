@@ -59,7 +59,7 @@ function draw() {
 
 //write code to move fairy left and right
 
-if(star.y>470 && starBody.positionY > 470){
+if(star.y>470 && starBody.position.y > 470){
 	Matter.Body.setStatic(starBody,true);
 }
 
